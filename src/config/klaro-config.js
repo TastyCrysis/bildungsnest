@@ -1,3 +1,5 @@
+"use client";
+
 const klaroConfig = {
   storageKey: "bildungsnest-cookie-consent",
   cookieName: "klaro",
