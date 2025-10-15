@@ -1,6 +1,11 @@
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
-import KlaroInit from "@/components/KlaroInit";
+import dynamic from "next/dynamic";
+
+// Importiere KlaroInit nur im Browser, nicht beim Server-Rendering
+const KlaroInit = dynamic(() => import("@/components/KlaroInit"), {
+  ssr: false,
+});
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
