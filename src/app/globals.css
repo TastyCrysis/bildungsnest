@@ -1,4 +1,5 @@
 @import "tailwindcss";
+@import "klaro/dist/klaro.css";
 
 :root {
   --background: #ffffff;
@@ -12,15 +13,101 @@
   --font-mono: var(--font-geist-mono);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
-
 body {
   background: var(--background);
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Klaro Custom Styling - Bildungsnest Theme */
+.klaro {
+  --primary-color: #553906;
+  --light-bg: #fbefd9;
+  --dark-text: #553906;
+  --border-radius: 8px;
+}
+
+/* Cookie Notice (der Banner unten) */
+.klaro .cookie-notice {
+  background: #fbefd9 !important;
+  border: 2px solid #553906 !important;
+  border-radius: var(--border-radius) !important;
+  color: #553906 !important;
+  box-shadow: 0 4px 6px rgba(85, 57, 6, 0.1) !important;
+}
+
+.klaro .cookie-notice .cn-body {
+  color: #553906 !important;
+}
+
+.klaro .cookie-notice h1,
+.klaro .cookie-notice p {
+  color: #553906 !important;
+}
+
+/* Cookie Modal (die Einstellungen) */
+.klaro .cookie-modal {
+  background: rgba(251, 239, 217, 0.95) !important;
+}
+
+.klaro .cookie-modal .cm-modal {
+  background: #fbefd9 !important;
+  border: 2px solid #553906 !important;
+  border-radius: var(--border-radius) !important;
+}
+
+.klaro .cookie-modal .cm-header {
+  background: #553906 !important;
+  color: #fbefd9 !important;
+  border-radius: var(--border-radius) var(--border-radius) 0 0 !important;
+}
+
+.klaro .cookie-modal .cm-body {
+  color: #553906 !important;
+}
+
+/* Buttons */
+.klaro .cm-btn,
+.klaro .cn-button {
+  border-radius: 6px !important;
+  font-weight: 600 !important;
+  transition: all 0.2s ease !important;
+}
+
+.klaro .cm-btn.cm-btn-success,
+.klaro .cn-button.cn-ok {
+  background: #553906 !important;
+  color: #fbefd9 !important;
+  border: 2px solid #553906 !important;
+}
+
+.klaro .cm-btn.cm-btn-success:hover,
+.klaro .cn-button.cn-ok:hover {
+  background: #6b4808 !important;
+  transform: translateY(-1px);
+  box-shadow: 0 2px 4px rgba(85, 57, 6, 0.2) !important;
+}
+
+.klaro .cm-btn.cm-btn-info,
+.klaro .cn-button.cn-learn-more {
+  background: transparent !important;
+  color: #553906 !important;
+  border: 2px solid #553906 !important;
+}
+
+.klaro .cm-btn.cm-btn-info:hover,
+.klaro .cn-button.cn-learn-more:hover {
+  background: rgba(85, 57, 6, 0.1) !important;
+}
+
+.klaro .cm-btn.cm-btn-decline,
+.klaro .cn-button.cn-decline {
+  background: transparent !important;
+  color: #553906 !important;
+  border: 2px solid #553906 !important;
+}
+
+/* Toggles */
+.klaro .cm-list-input:checked + .cm-list-label .slider {
+  background: #553906 !important;
 }
