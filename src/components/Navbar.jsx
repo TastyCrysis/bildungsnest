@@ -11,12 +11,15 @@ export default function Navbar() {
         height={50}
         className="bg-[#fbefd9] rounded-full"
       />
-      <Link
-        href="mailto:info@bildungsnest-eurasburg.de"
-        className="cursor-pointer"
-      >
-        Kontakt
-      </Link>
+      <div>
+        <Link
+          href="mailto:info@bildungsnest-eurasburg.de"
+          className="cursor-pointer underline hover:text-[#c08009] transition-colors"
+        >
+          Kontakt:
+        </Link>
+        <p>info@bildungsnest-eurasburg.de</p>
+      </div>
     </div>
   );
 }
